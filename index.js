@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 
 const { writeFile } = require("fs").promises;
 
+// prompts the user to input info about their project
 const promptUser = () => {
     return inquirer.prompt([
     {
@@ -89,6 +90,7 @@ function renderLicenseSection(license) {
   }
 }
 
+//generates readme.md file
 const generateMD = ({title, description, installation, usage, contributing, tests, github, email, license}) =>
 `${renderLicenseBadge(license)}
 
